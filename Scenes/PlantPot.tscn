@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cbjfcsxa2uwns"]
+
+[ext_resource type="Texture2D" uid="uid://dhvmpu5roopyl" path="res://Assets/EmptyPot.svg" id="1_6c1ws"]
+[ext_resource type="Script" uid="uid://ccvdvrb5v76o8" path="res://Scripts/PlantPot.gd" id="1_iio42"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vpvrv"]
+
+[node name="PlantPot" type="RigidBody2D" unique_id=1852047274]
+script = ExtResource("1_iio42")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1712920650]
+scale = Vector2(1.2249537, 1.2249537)
+texture = ExtResource("1_6c1ws")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1574545239]
+scale = Vector2(1.2249537, 1.2249537)
+polygon = PackedVector2Array(32, 25.400002, 32, -27.6, 19, -32, -25.9, -32, -32, -26.6, -32, 28.400002, -27.8, 32, 25.8, 32)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1398040456]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=304313997]
+scale = Vector2(5.051993, 5.0808625)
+shape = SubResource("RectangleShape2D_vpvrv")
+
+[node name="Plant" type="Node2D" parent="." unique_id=1410767282]
+
+[node name="PlantSprite" type="Sprite2D" parent="Plant" unique_id=1730931947]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

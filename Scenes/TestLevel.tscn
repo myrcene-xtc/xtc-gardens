@@ -1,3 +1,43 @@
 [gd_scene format=3 uid="uid://nlowmmvtstnw"]
 
+[ext_resource type="PackedScene" uid="uid://bgjkptfax17es" path="res://Scenes/Player.tscn" id="1_bhm8u"]
+[ext_resource type="PackedScene" uid="uid://jtwa078uohhv" path="res://Scenes/TestObject.tscn" id="2_5ms4e"]
+[ext_resource type="PackedScene" uid="uid://cbjfcsxa2uwns" path="res://Scenes/PlantPot.tscn" id="4_oy2kj"]
+[ext_resource type="Resource" uid="uid://chdrfav15rf7s" path="res://Data/Plants/Cocaine.tres" id="4_sa0i8"]
+[ext_resource type="PackedScene" uid="uid://b0cqyx4e611ox" path="res://Scenes/SeedObject.tscn" id="4_ujyaq"]
+
 [node name="TestLevel" type="Node2D" unique_id=1996488349]
+
+[node name="Player" parent="." unique_id=685746132 instance=ExtResource("1_bhm8u")]
+position = Vector2(267, 183)
+
+[node name="Walls" type="Node2D" parent="." unique_id=997126390]
+
+[node name="WallTop" parent="Walls" unique_id=1266975105 instance=ExtResource("2_5ms4e")]
+position = Vector2(584, -51)
+scale = Vector2(11.600006, 1)
+
+[node name="WallBottom" parent="Walls" unique_id=165201288 instance=ExtResource("2_5ms4e")]
+position = Vector2(584, 699)
+scale = Vector2(11.600006, 1)
+
+[node name="WallLeft" parent="Walls" unique_id=273964644 instance=ExtResource("2_5ms4e")]
+position = Vector2(-51, 366)
+rotation = 1.5707964
+scale = Vector2(11.600006, 1)
+
+[node name="WallRight" parent="Walls" unique_id=776441118 instance=ExtResource("2_5ms4e")]
+position = Vector2(1203, 372.00003)
+rotation = 1.5707964
+scale = Vector2(11.600006, 1)
+
+[node name="PlantSeed" parent="." unique_id=103229665 instance=ExtResource("4_ujyaq")]
+position = Vector2(420, 177)
+mass = 10.0
+linear_damp = 4.0
+plant = ExtResource("4_sa0i8")
+
+[node name="PlantPot" parent="." unique_id=1852047274 instance=ExtResource("4_oy2kj")]
+position = Vector2(514, 52)
+can_sleep = false
+freeze = true

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b0cqyx4e611ox"]
+
+[ext_resource type="Script" uid="uid://ywfaonh28nyb" path="res://Scripts/SeedObject.gd" id="1_464dq"]
+[ext_resource type="Texture2D" uid="uid://cjqct00deb3t4" path="res://Assets/PlantSeed.svg" id="1_fjhb8"]
+
+[node name="SeedObject" type="RigidBody2D" unique_id=1852047274]
+script = ExtResource("1_464dq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1712920650]
+scale = Vector2(0.8074439, 0.8074439)
+texture = ExtResource("1_fjhb8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1145800473]
+scale = Vector2(0.8074439, 0.8074439)
+polygon = PackedVector2Array(32, 22.5, 32, -23.1, 10.400002, -32, -16.5, -32, -32, -21.5, -32, 24.5, -20.1, 32, 18.900002, 32)
