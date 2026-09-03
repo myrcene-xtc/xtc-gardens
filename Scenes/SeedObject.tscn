@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://b0cqyx4e611ox"]
 
 [ext_resource type="Script" uid="uid://ywfaonh28nyb" path="res://Scripts/SeedObject.gd" id="1_464dq"]
-[ext_resource type="Texture2D" uid="uid://cjqct00deb3t4" path="res://Assets/PlantSeed.svg" id="1_fjhb8"]
+[ext_resource type="Texture2D" uid="uid://bepcfxqcqgtu0" path="res://Assets/MarijuanaStarter.svg" id="2_464dq"]
 
 [node name="SeedObject" type="RigidBody2D" unique_id=1852047274]
 script = ExtResource("1_464dq")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1712920650]
-scale = Vector2(0.8074439, 0.8074439)
-texture = ExtResource("1_fjhb8")
+scale = Vector2(0.01193048, 0.01193048)
+texture = ExtResource("2_464dq")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1145800473]
 scale = Vector2(0.8074439, 0.8074439)

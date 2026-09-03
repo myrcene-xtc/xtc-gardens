@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="Plant" format=3 uid="uid://cndwu6jrqu5uv"]
 
+[ext_resource type="PackedScene" uid="uid://ba0tlfjgkvuuv" path="res://Scenes/CannabisBud.tscn" id="1_dniqo"]
 [ext_resource type="Texture2D" uid="uid://vc43f16wtof2" path="res://Assets/RedSquare.svg" id="1_l3whe"]
 [ext_resource type="Script" uid="uid://dibe3icn73ptu" path="res://Scripts/PlantResource.gd" id="1_nmex1"]
 
@@ -7,4 +8,7 @@
 script = ExtResource("1_nmex1")
 plant_name = "Cannabis"
 plant_sprites = Array[Texture2D]([ExtResource("1_l3whe")])
+harvested_crop = ExtResource("1_dniqo")
+growth_time = 9
+growth_stages = 3
 metadata/_custom_type_script = "uid://dibe3icn73ptu"

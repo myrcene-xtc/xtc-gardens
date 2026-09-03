@@ -19,7 +19,8 @@ func set_color(new_color: SPRITE_COLOR) -> void:
 
 func _ready() -> void:
 	set_color(state)
-	
+
+# ANCHOR handle physics shit
 func _physics_process(delta: float) -> void:
 	var direction := Vector2(Input.get_axis("move_left", "move_right"), Input.get_axis("move_up", "move_down")).normalized()
 	# horizontal movement

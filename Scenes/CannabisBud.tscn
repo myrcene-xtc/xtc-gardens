@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ba0tlfjgkvuuv"]
+
+[ext_resource type="Texture2D" uid="uid://beaw1bnk7h185" path="res://Assets/Untitled.svg" id="1_biqgc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vpvrv"]
+size = Vector2(42, 42)
+
+[node name="CannabisBud" type="RigidBody2D" unique_id=822073621]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1956836367]
+scale = Vector2(0.009715073, 0.009715073)
+texture = ExtResource("1_biqgc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=877080864]
+shape = SubResource("RectangleShape2D_vpvrv")
