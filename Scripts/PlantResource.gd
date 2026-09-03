@@ -1,6 +1,6 @@
 extends Resource
 class_name Plant
 
-@export var PlantName: String
-@export var PlantSprites: Array[Texture2D]
-@export var PlantValue: int
+@export var plant_name: String
+@export var plant_sprites: Array[Texture2D]
+@export var plant_value: int

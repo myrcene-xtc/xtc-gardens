@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Plant" format=3 uid="uid://cndwu6jrqu5uv"]
 
-[ext_resource type="Texture2D" uid="uid://fsw0tjt2nau2" path="res://Assets/BlueSquare.svg" id="1_l3whe"]
+[ext_resource type="Texture2D" uid="uid://vc43f16wtof2" path="res://Assets/RedSquare.svg" id="1_l3whe"]
 [ext_resource type="Script" uid="uid://dibe3icn73ptu" path="res://Scripts/PlantResource.gd" id="1_nmex1"]
 
 [resource]
 script = ExtResource("1_nmex1")
-PlantName = "Cannabis"
-PlantSprites = Array[Texture2D]([ExtResource("1_l3whe")])
+plant_name = "Cannabis"
+plant_sprites = Array[Texture2D]([ExtResource("1_l3whe")])
 metadata/_custom_type_script = "uid://dibe3icn73ptu"

@@ -1,9 +1,9 @@
 extends CharacterBody2D
 enum SPRITE_COLOR {RED, BLUE}
 
-@export var SPEED = 300.0
-@export var STATE: SPRITE_COLOR
-@export var PUSH_FORCE := 0.3
+@export var speed = 300.0
+@export var state: SPRITE_COLOR
+@export var push_force := 0.3
 
 @onready var sprite: Sprite2D = $Sprite2D
 
@@ -18,21 +18,21 @@ func set_color(new_color: SPRITE_COLOR) -> void:
 	sprite.modulate = color_map[new_color]
 
 func _ready() -> void:
-	set_color(STATE)
+	set_color(state)
 	
 func _physics_process(delta: float) -> void:
 	var direction := Vector2(Input.get_axis("move_left", "move_right"), Input.get_axis("move_up", "move_down")).normalized()
 	# horizontal movement
 	if direction.x:
-		velocity.x = direction.x * SPEED
+		velocity.x = direction.x * speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, speed)
 
 	# vertical movement
 	if direction.y:
-		velocity.y = direction.y * SPEED
+		velocity.y = direction.y * speed
 	else:
-		velocity.y = move_toward(velocity.y, 0, SPEED)
+		velocity.y = move_toward(velocity.y, 0, speed)
 
 	var temp_velocity: Vector2 = velocity
 	move_and_slide()
@@ -41,4 +41,4 @@ func _physics_process(delta: float) -> void:
 		var coll: KinematicCollision2D = get_slide_collision(i)
 		var node: Node = coll.get_collider()
 		if node is RigidBody2D:
-			node.apply_central_impulse(temp_velocity * PUSH_FORCE)
+			node.apply_central_impulse(temp_velocity * push_force)

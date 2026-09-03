@@ -1,21 +1,13 @@
 extends RigidBody2D
 
-@onready var PlantSprite: Sprite2D = $Plant/PlantSprite
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
+@onready var plant_sprite: Sprite2D = $Plant/PlantSprite
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("seed"):
+		if !body.plant:
+			pass
+
 		print("Seed entered potting area.")
-		PlantSprite.texture = body.plant.PlantSprites[0]
-		print(body.plant.PlantName)
+		plant_sprite.texture = body.plant.plant_sprites[0]
+		print(body.plant.plant_name)
 		body.queue_free()
